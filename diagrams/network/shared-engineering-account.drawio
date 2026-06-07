@@ -1,0 +1,26 @@
+<mxfile host="app.diagrams.net" modified="2026-06-08T00:00:00.000Z" agent="Codex" version="24.7.17">
+  <diagram id="shared-engineering-account" name="Shared Engineering Account">
+    <mxGraphModel dx="1000" dy="700" grid="1" gridSize="10" page="1" pageScale="1" pageWidth="1169" pageHeight="827">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="account" value="Shared Engineering Account&#xa;555555555555" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f2ff;strokeColor=#5b8ec5;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="60" y="60" width="960" height="560" as="geometry"/>
+        </mxCell>
+        <mxCell id="obs" value="Observability&#xa;Datadog integration&#xa;CloudWatch forwarding" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eef3ff;strokeColor=#7891c9" vertex="1" parent="1">
+          <mxGeometry x="150" y="190" width="230" height="130" as="geometry"/>
+        </mxCell>
+        <mxCell id="deploy" value="Deployment services&#xa;GitHub Actions roles&#xa;CDK bootstrap roles" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eef7ee;strokeColor=#6aa36f" vertex="1" parent="1">
+          <mxGeometry x="450" y="190" width="230" height="130" as="geometry"/>
+        </mxCell>
+        <mxCell id="network" value="Shared networking&#xa;DNS, VPC endpoints, egress patterns" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff7e6;strokeColor=#d6a344" vertex="1" parent="1">
+          <mxGeometry x="300" y="390" width="260" height="120" as="geometry"/>
+        </mxCell>
+        <mxCell id="workloads" value="Workload accounts&#xa;A, B, Workbench, Data Analysis" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f7f3ea;strokeColor=#b89a61" vertex="1" parent="1">
+          <mxGeometry x="760" y="280" width="180" height="100" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
+

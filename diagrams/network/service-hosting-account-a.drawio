@@ -1,0 +1,35 @@
+<mxfile host="app.diagrams.net" modified="2026-06-08T00:00:00.000Z" agent="Codex" version="24.7.17">
+  <diagram id="service-hosting-account-a" name="Service Hosting Account A">
+    <mxGraphModel dx="1184" dy="727" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="account" value="Service Hosting Account A&#xa;111111111111" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f2ff;strokeColor=#5b8ec5;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="1060" height="700" as="geometry"/>
+        </mxCell>
+        <mxCell id="vpc" value="VPC: vpc-service-a-prod&#xa;Region: ap-northeast-1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eef7ee;strokeColor=#6aa36f;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="90" y="120" width="760" height="520" as="geometry"/>
+        </mxCell>
+        <mxCell id="public" value="Public subnets&#xa;ALB, NAT Gateway" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff7e6;strokeColor=#d6a344" vertex="1" parent="1">
+          <mxGeometry x="130" y="190" width="200" height="110" as="geometry"/>
+        </mxCell>
+        <mxCell id="private" value="Private app subnets&#xa;ECS Fargate frontend/backend&#xa;Lambda, VPC Endpoints" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eef3ff;strokeColor=#7891c9" vertex="1" parent="1">
+          <mxGeometry x="390" y="190" width="260" height="160" as="geometry"/>
+        </mxCell>
+        <mxCell id="data" value="Isolated data subnets&#xa;Aurora PostgreSQL" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5eef8;strokeColor=#a776bd" vertex="1" parent="1">
+          <mxGeometry x="390" y="410" width="260" height="110" as="geometry"/>
+        </mxCell>
+        <mxCell id="shared" value="Shared AWS services&#xa;Secrets Manager&#xa;Parameter Store&#xa;CloudWatch" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f6f7f9;strokeColor=#9aa4b2" vertex="1" parent="1">
+          <mxGeometry x="700" y="190" width="120" height="330" as="geometry"/>
+        </mxCell>
+        <mxCell id="external" value="External SaaS APIs" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f7f3ea;strokeColor=#b89a61" vertex="1" parent="1">
+          <mxGeometry x="910" y="210" width="150" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="dataAccount" value="Data Analysis Account&#xa;Curated data lake" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f2ff;strokeColor=#5b8ec5" vertex="1" parent="1">
+          <mxGeometry x="910" y="430" width="150" height="90" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
+

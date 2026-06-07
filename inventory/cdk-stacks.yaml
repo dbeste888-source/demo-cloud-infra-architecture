@@ -1,0 +1,38 @@
+cdk_stacks:
+  - name: ServiceA-NetworkStack
+    account: "111111111111"
+    repo: https://github.com/example/service-a-cdk
+    manages:
+      - VPC
+      - subnets
+      - NAT Gateway
+      - VPC endpoints
+    docs_page: docs/accounts/service-hosting-account-a.md
+
+  - name: ServiceA-AppStack
+    account: "111111111111"
+    repo: https://github.com/example/service-a-cdk
+    manages:
+      - ALB
+      - ECS Fargate services
+      - Aurora
+      - Secrets Manager
+      - Parameter Store
+
+  - name: ServiceB-AppStack
+    account: "222222222222"
+    repo: https://github.com/example/service-b-cdk
+    manages:
+      - NLB
+      - ECS Fargate API
+      - EC2 worker pool
+      - DynamoDB
+
+  - name: SharedObservabilityStack
+    account: "555555555555"
+    repo: https://github.com/example/shared-engineering-cdk
+    manages:
+      - Datadog integration
+      - CloudWatch forwarding
+      - alert routing
+

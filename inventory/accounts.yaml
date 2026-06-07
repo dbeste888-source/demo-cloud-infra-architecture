@@ -1,0 +1,79 @@
+accounts:
+  - name: Service Hosting Account A
+    account_id: "111111111111"
+    type: production_workload
+    owner_team: Platform Services
+    environment: production
+    regions:
+      - ap-northeast-1
+    purpose: Hosts customer-facing Service A workloads.
+    relationships:
+      - exports data to Data Analysis Account
+      - sends telemetry to Shared Engineering Account
+      - calls approved external SaaS APIs
+    page: docs/accounts/service-hosting-account-a.md
+    network_diagram: diagrams/network/service-hosting-account-a.drawio
+    management_model: CDK-managed
+    updated_at: "2026-06-08"
+
+  - name: Service Hosting Account B
+    account_id: "222222222222"
+    type: production_workload
+    owner_team: Platform Services
+    environment: production
+    regions:
+      - ap-northeast-1
+    purpose: Hosts partner-facing Service B workloads.
+    relationships:
+      - uses shared observability from Shared Engineering Account
+      - calls partner external APIs
+    page: docs/accounts/service-hosting-account-b.md
+    network_diagram: diagrams/network/service-hosting-account-b.drawio
+    management_model: CDK-managed
+    updated_at: "2026-06-08"
+
+  - name: Data Analysis Account
+    account_id: "333333333333"
+    type: analytics
+    owner_team: Data Platform
+    environment: production_analytics
+    regions:
+      - ap-northeast-1
+    purpose: Hosts governed data lake and analytics services.
+    relationships:
+      - receives exports from service accounts
+      - publishes curated datasets to approved consumers
+    page: docs/accounts/data-analysis-account.md
+    network_diagram: diagrams/network/data-analysis-account.drawio
+    management_model: Mixed CDK and manual governance
+    updated_at: "2026-06-08"
+
+  - name: Workbench Account
+    account_id: "444444444444"
+    type: sandbox
+    owner_team: Developer Experience
+    environment: sandbox
+    regions:
+      - ap-northeast-1
+    purpose: Provides controlled experimentation and training space.
+    relationships:
+      - uses shared engineering guardrails
+    page: docs/accounts/workbench-account.md
+    management_model: CDK-managed baseline with manual experiments
+    updated_at: "2026-06-08"
+
+  - name: Shared Engineering Account
+    account_id: "555555555555"
+    type: shared_services
+    owner_team: Cloud Platform
+    environment: shared_production
+    regions:
+      - ap-northeast-1
+    purpose: Provides shared observability, networking, security, and deployment services.
+    relationships:
+      - supports workload accounts
+      - owns shared dashboards and deployment roles
+    page: docs/accounts/shared-engineering-account.md
+    management_model: CDK-managed
+    updated_at: "2026-06-08"
+

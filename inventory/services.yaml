@@ -1,0 +1,35 @@
+services:
+  - name: Service A frontend
+    account: Service Hosting Account A
+    runtime: ECS Fargate
+    owner_team: Platform Services
+    communication_flow: flows/service-a-communication.md
+    repositories:
+      app: https://github.com/example/service-a
+      cdk: https://github.com/example/service-a-cdk
+
+  - name: Service A backend
+    account: Service Hosting Account A
+    runtime: ECS Fargate
+    owner_team: Platform Services
+    communication_flow: flows/service-a-communication.md
+    data_flow: flows/service-a-data-flow.md
+    repositories:
+      app: https://github.com/example/service-a
+      cdk: https://github.com/example/service-a-cdk
+
+  - name: Service B API
+    account: Service Hosting Account B
+    runtime: ECS Fargate
+    owner_team: Platform Services
+    communication_flow: flows/service-b-communication.md
+    repositories:
+      app: https://github.com/example/service-b
+      cdk: https://github.com/example/service-b-cdk
+
+  - name: Observability integration
+    account: Shared Engineering Account
+    runtime: Datadog AWS Integration
+    owner_team: Cloud Platform
+    communication_flow: flows/observability-flow.md
+

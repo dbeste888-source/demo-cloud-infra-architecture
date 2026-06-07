@@ -1,0 +1,11 @@
+title: Team AWS Architecture Portal
+description: GitHub-based architecture documentation wire harness
+theme: minima
+markdown: kramdown
+
+header_pages:
+  - account-overview.md
+  - ownership-overview.md
+  - update-rule.md
+  - review-checklist.md
+

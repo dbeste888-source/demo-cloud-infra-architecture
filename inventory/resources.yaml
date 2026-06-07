@@ -1,0 +1,46 @@
+resources:
+  - account: Service Hosting Account A
+    region: ap-northeast-1
+    vpc: vpc-service-a-prod
+    public_subnets:
+      - ALB
+      - NAT Gateway
+    private_app_subnets:
+      - ECS Fargate frontend
+      - ECS Fargate backend
+      - Lambda export validation
+      - VPC endpoints
+    isolated_data_subnets:
+      - Aurora PostgreSQL
+    shared_resources:
+      - Secrets Manager
+      - Parameter Store
+      - CloudWatch
+      - Datadog Forwarder
+
+  - account: Service Hosting Account B
+    region: ap-northeast-1
+    vpc: vpc-service-b-prod
+    public_subnets:
+      - NLB
+      - NAT Gateway
+    private_app_subnets:
+      - ECS Fargate API
+      - EC2 worker pool
+    shared_resources:
+      - DynamoDB
+      - S3 integration bucket
+      - CloudWatch
+
+  - account: Data Analysis Account
+    region: ap-northeast-1
+    vpc: vpc-data-analysis-prod
+    private_subnets:
+      - Glue jobs
+      - Lambda transforms
+      - VPC endpoints
+    data_services:
+      - S3 data lake
+      - Athena
+      - DynamoDB metadata table
+

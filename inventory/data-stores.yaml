@@ -1,0 +1,30 @@
+data_stores:
+  - name: Service A Aurora PostgreSQL
+    account: Service Hosting Account A
+    engine: Aurora PostgreSQL
+    classification: internal
+    owner_team: Platform Services
+    related_flow: flows/service-a-data-flow.md
+
+  - name: Service A export bucket
+    account: Service Hosting Account A
+    engine: S3
+    classification: internal
+    owner_team: Platform Services
+    consumer_account: Data Analysis Account
+    related_flow: flows/service-a-data-flow.md
+
+  - name: Curated data lake
+    account: Data Analysis Account
+    engine: S3
+    classification: internal
+    owner_team: Data Platform
+    producer_accounts:
+      - Service Hosting Account A
+
+  - name: Service B DynamoDB table
+    account: Service Hosting Account B
+    engine: DynamoDB
+    classification: internal
+    owner_team: Platform Services
+
