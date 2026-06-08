@@ -21,10 +21,11 @@ flowchart LR
 | Change type | Files normally touched |
 | --- | --- |
 | New account | `inventory/accounts.yaml`, `docs/account-overview.md`, `architecture/01-account/*.dsl`, account page |
-| Account/network change | `architecture/01-account/*.dsl`, preview SVG, account page |
-| Service communication/resource change | `architecture/02-service/*.drawio`, preview SVG, service page |
-| Isolated data-flow architecture change | `architecture/03-data-flow/*.drawio`, preview SVG, data-flow page |
+| Account change | `architecture/01-account/*.dsl`, preview SVG, account page |
+| Network infrastructure change | `architecture/02-network/*.drawio`, preview SVG, network page |
+| Service/data-flow change | `architecture/03-service-dataflow/*.drawio`, preview SVG, service-dataflow page |
 | Unit/API flow change | `architecture/04-unit/*.md`, unit page |
+| Observability change | `architecture/05-observability/*.drawio`, preview SVG, observability page |
 | Ownership change | `inventory/accounts.yaml`, `structurizr/ownership.dsl`, `docs/ownership-overview.md` |
 | Dashboard/runbook change | Account metadata block and related link sections |
 

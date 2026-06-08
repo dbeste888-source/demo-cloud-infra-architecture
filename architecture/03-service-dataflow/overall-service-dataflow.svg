@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="860" viewBox="0 0 1500 860" role="img" aria-label="Overall service and data flow draw.io preview">
+  <rect width="1500" height="860" fill="#f8fafc"/>
+  <text x="42" y="56" font-family="Segoe UI, Arial" font-size="30" font-weight="700" fill="#172033">draw.io Preview: Overall Service and Data Flow</text>
+  <text x="42" y="88" font-family="Segoe UI, Arial" font-size="16" fill="#617083">Services hosted in AWS accounts, their connections, and how AWS services realize features. Network detail is intentionally excluded.</text>
+  <g font-family="Segoe UI, Arial" font-size="15" fill="#172033">
+    <rect x="70" y="130" width="560" height="590" rx="10" fill="#eaf1ff" stroke="#7aa2e8"/>
+    <text x="104" y="172" font-size="20" font-weight="700">Service Hosting Account A</text>
+    <rect x="118" y="236" width="190" height="92" rx="8" fill="#fff7df" stroke="#e8c866"/>
+    <text x="154" y="274" font-weight="700">Service A frontend</text>
+    <text x="170" y="300" fill="#617083">ECS Fargate</text>
+    <rect x="386" y="236" width="200" height="92" rx="8" fill="#ffffff" stroke="#7aa2e8"/>
+    <text x="432" y="274" font-weight="700">Service A backend</text>
+    <text x="446" y="300" fill="#617083">ECS Fargate API</text>
+    <rect x="386" y="388" width="200" height="92" rx="8" fill="#f1edfb" stroke="#b69be6"/>
+    <text x="432" y="426" font-weight="700">Aurora PostgreSQL</text>
+    <text x="438" y="452" fill="#617083">transaction state</text>
+    <rect x="386" y="540" width="200" height="92" rx="8" fill="#f1edfb" stroke="#b69be6"/>
+    <text x="438" y="578" font-weight="700">S3 export bucket</text>
+    <text x="432" y="604" fill="#617083">feature data event</text>
+    <rect x="730" y="130" width="300" height="590" rx="10" fill="#f1edfb" stroke="#b69be6"/>
+    <text x="770" y="172" font-size="20" font-weight="700">Data Analysis Account</text>
+    <rect x="786" y="388" width="200" height="92" rx="8" fill="#ffffff" stroke="#b69be6"/>
+    <text x="820" y="426" font-weight="700">Curated S3 lake</text>
+    <text x="826" y="452" fill="#617083">approved datasets</text>
+    <rect x="786" y="540" width="200" height="92" rx="8" fill="#fff7df" stroke="#e8c866"/>
+    <text x="820" y="578" font-weight="700">Validation Lambda</text>
+    <text x="840" y="604" fill="#617083">schema check</text>
+    <rect x="1120" y="130" width="300" height="590" rx="10" fill="#e8f7f2" stroke="#8ac7b6"/>
+    <text x="1158" y="172" font-size="20" font-weight="700">Shared Engineering Account</text>
+    <rect x="1172" y="320" width="200" height="92" rx="8" fill="#ffffff" stroke="#8ac7b6"/>
+    <text x="1210" y="358" font-weight="700">CloudWatch / Datadog</text>
+    <text x="1228" y="384" fill="#617083">logs, metrics, traces</text>
+    <rect x="1172" y="540" width="200" height="92" rx="8" fill="#ffffff" stroke="#bdc9d8"/>
+    <text x="1215" y="578" font-weight="700">GitHub + CDK</text>
+    <text x="1236" y="604" fill="#617083">deployment</text>
+  </g>
+  <g stroke="#64748b" stroke-width="2" fill="none" marker-end="url(#arrow)">
+    <path d="M308 282 L386 282"/>
+    <path d="M486 328 L486 388"/>
+    <path d="M486 480 L486 540"/>
+    <path d="M586 586 L786 586"/>
+    <path d="M886 540 L886 480"/>
+    <path d="M586 282 C820 270 1040 330 1172 360"/>
+    <path d="M586 586 C820 700 1070 630 1172 586"/>
+  </g>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#64748b"/>
+    </marker>
+  </defs>
+</svg>
+

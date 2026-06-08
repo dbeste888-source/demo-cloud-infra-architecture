@@ -10,19 +10,19 @@ Use this checklist in pull requests that update architecture documentation.
 ## Navigation
 
 - [ ] Account Overview still links to the right account detail page.
-- [ ] Account detail page shows a Structurizr preview before metadata.
-- [ ] Service pages show a draw.io preview before metadata.
-- [ ] Data-flow pages show an isolated draw.io preview before metadata.
+- [ ] Account detail page shows all required previews before metadata.
+- [ ] Network page shows a draw.io preview before metadata.
+- [ ] Service/data-flow page shows a draw.io preview before metadata.
 - [ ] Unit/API pages show Mermaid previews only for single-service/module flow.
+- [ ] Observability page shows a draw.io preview before metadata.
 - [ ] Metadata links are current and owned.
 
 ## Diagram Quality
 
-- [ ] Structurizr remains account/network-level only.
-- [ ] Service draw.io diagrams show backend -> AWS resources -> feature realization.
-- [ ] Multi-service communication and detailed data movement stay in service-level draw.io diagrams.
-- [ ] Isolated data-flow architecture stays in data-flow-layer draw.io files.
-- [ ] Mermaid is limited to high-level data flow or unit/API flow previews.
+- [ ] Structurizr remains account-level.
+- [ ] Network draw.io stays restricted to account, region, VPC, AZ, subnet, IP capacity, IGW, router, route table, VPC peering, and VPC endpoints.
+- [ ] Service/data-flow draw.io shows services hosted in AWS accounts, AWS service usage, feature realization, and multi-service data movement.
+- [ ] Mermaid is limited to unit service or mini-app API flow previews.
 
 ## Metadata
 

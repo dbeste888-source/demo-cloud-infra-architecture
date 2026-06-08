@@ -18,9 +18,9 @@ title: Architecture Portal Home
   <aside class="flow-stack">
     <div class="flow-step"><span>1</span>Repository source files</div>
     <div class="flow-step"><span>2</span>Account overview</div>
-    <div class="flow-step"><span>3</span>Structurizr network preview</div>
-    <div class="flow-step"><span>4</span>draw.io service and data-flow previews</div>
-    <div class="flow-step"><span>5</span>Operational links and metadata</div>
+    <div class="flow-step"><span>3</span>Network infra draw.io preview</div>
+    <div class="flow-step"><span>4</span>Service/data draw.io and unit Mermaid previews</div>
+    <div class="flow-step"><span>5</span>Observability draw.io and metadata</div>
   </aside>
 </section>
 
@@ -29,9 +29,9 @@ title: Architecture Portal Home
     <strong>Account Overview</strong>
     <p>Structurizr preview for account-level navigation.</p>
   </a>
-  <a class="portal-card" href="{{ '/docs/services/service-a-backend.html' | relative_url }}">
-    <strong>Service Architecture</strong>
-    <p>draw.io preview for service backend communication.</p>
+  <a class="portal-card" href="{{ '/docs/network/service-hosting-account-a-network.html' | relative_url }}">
+    <strong>Network Infrastructure</strong>
+    <p>draw.io preview for network-only infrastructure.</p>
   </a>
   <a class="portal-card" href="{{ '/docs/update-rule.html' | relative_url }}">
     <strong>Update Rule</strong>
@@ -50,14 +50,15 @@ title: Architecture Portal Home
 GitHub Pages Home
   -> Account Overview
   -> Account detail page
-  -> Structurizr account/network preview
-  -> draw.io service architecture preview
-  -> draw.io data-flow architecture preview
-  -> Mermaid unit/API or high-level data-flow preview
+  -> Account Structurizr preview
+  -> Network infrastructure draw.io preview
+  -> Overall service and data-flow draw.io preview
+  -> Unit service Mermaid preview
+  -> Observability draw.io preview
   -> Metadata, repositories, dashboards, runbooks, and docs
 ```
 
   <h2>Tool Boundaries</h2>
 
-  <p>Structurizr is used for account and network-level previews. draw.io is used for service architecture and isolated data-flow architecture. Mermaid is used for high-level data flow and single-service API/unit flow previews.</p>
+  <p>Structurizr is used for account-level previews. draw.io is used for network infrastructure, overall service/data-flow, and observability. Mermaid is used for unit service/API previews.</p>
 </article>

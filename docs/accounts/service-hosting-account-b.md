@@ -47,6 +47,6 @@ This account is a secondary demo page. Follow [Service Hosting Account A](servic
 ## Architecture Layers
 
 <div class="layer-grid">
-  <a class="layer-card" href="{{ '/docs/services/service-a-backend.html' | relative_url }}"><strong>Service architecture pattern</strong><small>draw.io preview example</small></a>
-  <a class="layer-card" href="{{ '/docs/data-flows/service-a-data-architecture.html' | relative_url }}"><strong>Data-flow architecture pattern</strong><small>isolated draw.io preview example</small></a>
+  <a class="layer-card" href="{{ '/docs/network/service-hosting-account-a-network.html' | relative_url }}"><strong>Network architecture pattern</strong><small>draw.io preview example</small></a>
+  <a class="layer-card" href="{{ '/docs/service-dataflow/overall-service-dataflow.html' | relative_url }}"><strong>Service/data-flow pattern</strong><small>overall draw.io preview example</small></a>
 </div>

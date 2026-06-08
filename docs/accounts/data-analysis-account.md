@@ -46,5 +46,4 @@ This account is represented in the demo through the Service A isolated data-flow
 
 | Service area | Flow pages |
 | --- | --- |
-| Service A data export | [Data-flow architecture](../data-flows/service-a-data-architecture.md) |
-| High-level data flow | [Mermaid preview](../../architecture/03-data-flow/service-a-high-level-data-flow.html) |
+| Service A data export | [Overall service/data-flow architecture](../service-dataflow/overall-service-dataflow.md) |

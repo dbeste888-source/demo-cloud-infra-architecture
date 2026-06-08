@@ -44,6 +44,6 @@ Shared Engineering appears in the account/network Structurizr preview and servic
 ## Related Layers
 
 <div class="layer-grid">
-  <a class="layer-card" href="{{ '/docs/services/service-a-backend.html' | relative_url }}"><strong>Service architecture pattern</strong><small>Shared telemetry and deployment roles appear in service draw.io</small></a>
+  <a class="layer-card" href="{{ '/docs/observability/observability-architecture.html' | relative_url }}"><strong>Observability architecture</strong><small>draw.io preview</small></a>
   <a class="layer-card" href="{{ '/docs/change-map.html' | relative_url }}"><strong>Change map</strong><small>Where to update shared service metadata</small></a>
 </div>

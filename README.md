@@ -7,10 +7,11 @@ This repository is a demo wire harness for an internal AWS architecture document
 ```text
 Pages portal
   -> Account Overview
-  -> Account + Network Architecture
-  -> Service Architecture
-  -> Data-flow Architecture
+  -> Account Architecture
+  -> Network Infrastructure
+  -> Overall Service and Data-flow Architecture
   -> Unit/API Flow
+  -> Observability Architecture
   -> Metadata / Links
 ```
 
@@ -19,11 +20,11 @@ Pages portal
 | Layer | Tool | Purpose |
 | --- | --- | --- |
 | Account overview | Structurizr | Top-level account navigation and ownership relationship preview. |
-| Account + network | Structurizr | Account/network-level architecture preview. |
-| Service architecture | draw.io | Backend -> AWS resources -> feature realization. Also holds detailed multi-service communication and data movement. |
-| Data-flow architecture | draw.io | Isolated data-flow architecture layer. |
-| High-level data flow | Mermaid | Small readable data-flow preview. |
+| Account architecture | Structurizr | Account-level architecture preview. |
+| Network infrastructure | draw.io | Account -> region -> VPC -> AZ -> subnet -> IP capacity -> IGW/router/route tables -> VPC peering/endpoints. |
+| Overall service/data-flow | draw.io | Services hosted in AWS accounts, AWS services used for feature realization, and multi-service data movement. |
 | Unit/API flow | Mermaid | Single microservice/module API flow. |
+| Observability | draw.io | Logs, metrics, traces, dashboards, alerts, and runbooks. |
 | Metadata | YAML and Markdown tables | Owner, account ID, repo, CDK, runbook, dashboard, Confluence, update timestamp. |
 
 ## Repository Structure
@@ -41,15 +42,17 @@ Pages portal
 │   │   ├── account-overview.svg
 │   │   ├── service-hosting-account-a-network.dsl
 │   │   └── service-hosting-account-a-network.svg
-│   ├── 02-service/
-│   │   ├── service-a-backend-architecture.drawio
-│   │   └── service-a-backend-architecture.svg
-│   ├── 03-data-flow/
-│   │   ├── service-a-data-flow-architecture.drawio
-│   │   ├── service-a-data-flow-architecture.svg
-│   │   └── service-a-high-level-data-flow.md
-│   └── 04-unit/
-│       └── service-a-api-flow.md
+│   ├── 02-network/
+│   │   ├── service-hosting-account-a-network-infra.drawio
+│   │   └── service-hosting-account-a-network-infra.svg
+│   ├── 03-service-dataflow/
+│   │   ├── overall-service-dataflow.drawio
+│   │   └── overall-service-dataflow.svg
+│   ├── 04-unit/
+│   │   └── service-a-api-flow.md
+│   └── 05-observability/
+│       ├── observability-architecture.drawio
+│       └── observability-architecture.svg
 ├── docs/
 │   ├── index.md
 │   ├── account-overview.md
@@ -57,9 +60,10 @@ Pages portal
 │   ├── update-rule.md
 │   ├── review-checklist.md
 │   ├── accounts/
-│   ├── services/
-│   ├── data-flows/
-│   └── units/
+│   ├── network/
+│   ├── service-dataflow/
+│   ├── units/
+│   └── observability/
 └── inventory/
     ├── accounts.yaml
     ├── services.yaml
@@ -73,12 +77,11 @@ Pages portal
 | Change | Edit |
 | --- | --- |
 | Account ownership or relationship | `architecture/01-account/`, `docs/account-overview.md`, `inventory/accounts.yaml` |
-| Account/network architecture | `architecture/01-account/*network*.dsl`, preview SVG, account page |
-| Service backend communication | `architecture/02-service/*.drawio`, preview SVG, service page |
-| Detailed multi-service communication/data movement | `architecture/02-service/*.drawio` |
-| Isolated data-flow architecture | `architecture/03-data-flow/*.drawio`, preview SVG, data-flow page |
-| High-level data flow | `architecture/03-data-flow/*.md` |
+| Account architecture | `architecture/01-account/*.dsl`, preview SVG, account page |
+| Network infrastructure | `architecture/02-network/*.drawio`, preview SVG, network page |
+| Overall service/data-flow architecture | `architecture/03-service-dataflow/*.drawio`, preview SVG, service-dataflow page |
 | Single-service unit/API flow | `architecture/04-unit/*.md`, unit page |
+| Observability architecture | `architecture/05-observability/*.drawio`, preview SVG, observability page |
 | Metadata only | `inventory/*.yaml` and affected page metadata table |
 
 ## Demo Path
@@ -86,9 +89,10 @@ Pages portal
 1. Start at `index.md`.
 2. Open `docs/account-overview.md`.
 3. Open `docs/accounts/service-hosting-account-a.md`.
-4. Open `docs/services/service-a-backend.md`.
-5. Open `docs/data-flows/service-a-data-architecture.md`.
+4. Open `docs/network/service-hosting-account-a-network.md`.
+5. Open `docs/service-dataflow/overall-service-dataflow.md`.
 6. Open `docs/units/service-a-api-flow.md`.
+7. Open `docs/observability/observability-architecture.md`.
 
 ## GitLab Pages
 

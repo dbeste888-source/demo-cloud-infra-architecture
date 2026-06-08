@@ -1,0 +1,23 @@
+<mxfile host="app.diagrams.net" modified="2026-06-09T00:00:00.000Z" agent="Codex" version="24.7.17">
+  <diagram id="observability-architecture" name="Observability Architecture">
+    <mxGraphModel dx="1400" dy="820" grid="1" gridSize="10" page="1" pageScale="1" pageWidth="1400" pageHeight="820">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="workload" value="Workload accounts&#xa;ECS, Lambda, RDS, ALB" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eaf1ff;strokeColor=#7aa2e8;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="80" y="180" width="260" height="180" as="geometry"/>
+        </mxCell>
+        <mxCell id="cloudwatch" value="CloudWatch&#xa;Logs, Metrics, Alarms" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff7df;strokeColor=#e8c866;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="450" y="180" width="260" height="180" as="geometry"/>
+        </mxCell>
+        <mxCell id="shared" value="Shared Engineering Account&#xa;Datadog Forwarder + AWS Integration" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f7f2;strokeColor=#8ac7b6;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="820" y="180" width="300" height="180" as="geometry"/>
+        </mxCell>
+        <mxCell id="ops" value="Operations users&#xa;dashboards, alerts, runbooks" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#bdc9d8;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="1220" y="180" width="140" height="180" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
+
