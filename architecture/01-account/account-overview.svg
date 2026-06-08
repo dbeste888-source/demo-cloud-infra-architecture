@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="520" viewBox="0 0 1180 520" role="img" aria-label="Structurizr account overview preview">
+  <rect width="1180" height="520" fill="#f8fafc"/>
+  <text x="40" y="54" font-family="Segoe UI, Arial" font-size="26" font-weight="700" fill="#172033">Structurizr Preview: Account Overview</text>
+  <text x="40" y="86" font-family="Segoe UI, Arial" font-size="15" fill="#617083">Lightweight account and ownership navigation only</text>
+  <g font-family="Segoe UI, Arial" font-size="15" fill="#172033">
+    <rect x="52" y="160" width="210" height="94" rx="8" fill="#eaf1ff" stroke="#7aa2e8"/>
+    <text x="76" y="196" font-weight="700">Service Hosting Account A</text>
+    <text x="76" y="224" fill="#617083">Platform Services</text>
+    <rect x="52" y="320" width="210" height="94" rx="8" fill="#eaf1ff" stroke="#7aa2e8"/>
+    <text x="76" y="356" font-weight="700">Service Hosting Account B</text>
+    <text x="76" y="384" fill="#617083">Platform Services</text>
+    <rect x="482" y="160" width="210" height="94" rx="8" fill="#f1edfb" stroke="#b69be6"/>
+    <text x="514" y="196" font-weight="700">Data Analysis Account</text>
+    <text x="514" y="224" fill="#617083">Data Platform</text>
+    <rect x="482" y="320" width="210" height="94" rx="8" fill="#fff7df" stroke="#e8c866"/>
+    <text x="526" y="356" font-weight="700">Workbench Account</text>
+    <text x="526" y="384" fill="#617083">Developer Experience</text>
+    <rect x="872" y="238" width="230" height="104" rx="8" fill="#e8f7f2" stroke="#8ac7b6"/>
+    <text x="904" y="280" font-weight="700">Shared Engineering</text>
+    <text x="904" y="308" fill="#617083">Cloud Platform</text>
+  </g>
+  <g stroke="#64748b" stroke-width="2" fill="none" marker-end="url(#arrow)">
+    <path d="M262 207 C340 207 394 207 482 207"/>
+    <path d="M262 367 C418 367 702 336 872 300"/>
+    <path d="M692 207 C770 220 810 246 872 278"/>
+    <path d="M692 367 C770 354 810 326 872 306"/>
+  </g>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#64748b"/>
+    </marker>
+  </defs>
+</svg>
+

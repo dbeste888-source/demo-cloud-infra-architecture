@@ -28,9 +28,9 @@ The Workbench Account provides a controlled environment for experimentation, tra
 | Management model | CDK-managed baseline with manual experiments |
 | Updated | 2026-06-08 |
 
-## Network + Resource Architecture
+## Account/Network Scope
 
-Primary detailed diagram: [`../../diagrams/network/workbench-account.drawio`](../../diagrams/network/workbench-account.drawio)
+This account is a secondary metadata page. Use the Account A page for the complete Structurizr account/network preview pattern.
 
 ### Diagram Scope
 

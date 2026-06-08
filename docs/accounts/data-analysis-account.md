@@ -28,9 +28,9 @@ The Data Analysis Account hosts governed analytics workloads and curated dataset
 | Management model | Mixed CDK and manual governance |
 | Updated | 2026-06-08 |
 
-## Network + Resource Architecture
+## Account/Data Scope
 
-Primary detailed diagram: [`../../diagrams/network/data-analysis-account.drawio`](../../diagrams/network/data-analysis-account.drawio)
+This account is represented in the demo through the Service A isolated data-flow layer.
 
 ### Diagram Scope
 
@@ -46,6 +46,5 @@ Primary detailed diagram: [`../../diagrams/network/data-analysis-account.drawio`
 
 | Service area | Flow pages |
 | --- | --- |
-| Service A data export | [Service A data flow](../../flows/service-a-data-flow.md) |
-| Observability | [Observability flow](../../flows/observability-flow.md) |
-
+| Service A data export | [Data-flow architecture](../data-flows/service-a-data-architecture.md) |
+| High-level data flow | [Mermaid preview](../../architecture/03-data-flow/service-a-high-level-data-flow.html) |

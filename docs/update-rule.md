@@ -20,10 +20,11 @@ flowchart LR
 
 | Change type | Files normally touched |
 | --- | --- |
-| New account | `inventory/accounts.yaml`, `docs/account-overview.md`, `docs/accounts/*.md`, `structurizr/accounts.dsl` |
-| VPC/resource change | `diagrams/network/*.drawio`, `diagrams/resources/*.drawio`, account detail page |
-| Service communication change | `flows/*communication.md`, account detail page |
-| Data path change | `flows/*data-flow.md`, `inventory/data-stores.yaml`, account detail page |
+| New account | `inventory/accounts.yaml`, `docs/account-overview.md`, `architecture/01-account/*.dsl`, account page |
+| Account/network change | `architecture/01-account/*.dsl`, preview SVG, account page |
+| Service communication/resource change | `architecture/02-service/*.drawio`, preview SVG, service page |
+| Isolated data-flow architecture change | `architecture/03-data-flow/*.drawio`, preview SVG, data-flow page |
+| Unit/API flow change | `architecture/04-unit/*.md`, unit page |
 | Ownership change | `inventory/accounts.yaml`, `structurizr/ownership.dsl`, `docs/ownership-overview.md` |
 | Dashboard/runbook change | Account metadata block and related link sections |
 
@@ -34,4 +35,3 @@ docs/account-a-new-private-endpoint
 docs/service-a-observability-flow
 docs/data-analysis-s3-access-pattern
 ```
-

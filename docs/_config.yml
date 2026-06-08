@@ -4,6 +4,7 @@ markdown: kramdown
 
 header_pages:
   - account-overview.md
+  - change-map.md
   - ownership-overview.md
   - update-rule.md
   - review-checklist.md

@@ -28,9 +28,9 @@ The Shared Engineering Account provides shared observability, networking, deploy
 | Management model | CDK-managed |
 | Updated | 2026-06-08 |
 
-## Network + Resource Architecture
+## Shared Account Scope
 
-Primary detailed diagram: [`../../diagrams/network/shared-engineering-account.drawio`](../../diagrams/network/shared-engineering-account.drawio)
+Shared Engineering appears in the account/network Structurizr preview and service-level draw.io preview.
 
 ### Diagram Scope
 
@@ -41,9 +41,9 @@ Primary detailed diagram: [`../../diagrams/network/shared-engineering-account.dr
 | Shared deployment | GitHub Actions roles, CDK bootstrap roles, artifact access |
 | Cross-account | Provides shared guardrails and services to workload accounts |
 
-## Service Areas
+## Related Layers
 
-| Service area | Flow pages |
-| --- | --- |
-| Observability | [Observability flow](../../flows/observability-flow.md) |
-| Deployment | [CI/CD flow](../../flows/cicd-flow.md) |
+<div class="layer-grid">
+  <a class="layer-card" href="{{ '/docs/services/service-a-backend.html' | relative_url }}"><strong>Service architecture pattern</strong><small>Shared telemetry and deployment roles appear in service draw.io</small></a>
+  <a class="layer-card" href="{{ '/docs/change-map.html' | relative_url }}"><strong>Change map</strong><small>Where to update shared service metadata</small></a>
+</div>

@@ -8,6 +8,7 @@ exclude:
 
 header_pages:
   - docs/account-overview.md
+  - docs/change-map.md
   - docs/ownership-overview.md
   - docs/update-rule.md
   - docs/review-checklist.md

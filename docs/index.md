@@ -11,14 +11,15 @@ title: Architecture Portal Home
     <div class="hero-actions">
       <a class="button primary" href="{{ '/docs/account-overview.html' | relative_url }}">Start with Accounts</a>
       <a class="button" href="{{ '/docs/ownership-overview.html' | relative_url }}">View Ownership</a>
+      <a class="button" href="https://github.com/dbeste888-source/demo-cloud-infra-architecture/archive/refs/heads/main.zip">Download All Files</a>
     </div>
   </div>
 
   <aside class="flow-stack">
     <div class="flow-step"><span>1</span>Repository source files</div>
     <div class="flow-step"><span>2</span>Account overview</div>
-    <div class="flow-step"><span>3</span>draw.io architecture</div>
-    <div class="flow-step"><span>4</span>Mermaid flow pages</div>
+    <div class="flow-step"><span>3</span>Structurizr network preview</div>
+    <div class="flow-step"><span>4</span>draw.io service and data-flow previews</div>
     <div class="flow-step"><span>5</span>Operational links and metadata</div>
   </aside>
 </section>
@@ -26,11 +27,11 @@ title: Architecture Portal Home
 <section class="section-grid">
   <a class="portal-card" href="{{ '/docs/account-overview.html' | relative_url }}">
     <strong>Account Overview</strong>
-    <p>Top-level navigation for Service Hosting, Data Analysis, Workbench, and Shared Engineering accounts.</p>
+    <p>Structurizr preview for account-level navigation.</p>
   </a>
-  <a class="portal-card" href="{{ '/docs/ownership-overview.html' | relative_url }}">
-    <strong>Ownership Overview</strong>
-    <p>Team ownership and review routing for account-level architecture changes.</p>
+  <a class="portal-card" href="{{ '/docs/services/service-a-backend.html' | relative_url }}">
+    <strong>Service Architecture</strong>
+    <p>draw.io preview for service backend communication.</p>
   </a>
   <a class="portal-card" href="{{ '/docs/update-rule.html' | relative_url }}">
     <strong>Update Rule</strong>
@@ -49,12 +50,14 @@ title: Architecture Portal Home
 GitHub Pages Home
   -> Account Overview
   -> Account detail page
-  -> draw.io network/resource diagram
-  -> Mermaid communication/data flow
+  -> Structurizr account/network preview
+  -> draw.io service architecture preview
+  -> draw.io data-flow architecture preview
+  -> Mermaid unit/API or high-level data-flow preview
   -> Metadata, repositories, dashboards, runbooks, and docs
 ```
 
   <h2>Tool Boundaries</h2>
 
-  <p>Structurizr is intentionally lightweight here. It explains account and ownership relationships, not every AWS resource. Detailed VPC, subnet, and resource diagrams live in draw.io files. Mermaid pages explain simple logical flows. Markdown pages connect the layers together.</p>
+  <p>Structurizr is used for account and network-level previews. draw.io is used for service architecture and isolated data-flow architecture. Mermaid is used for high-level data flow and single-service API/unit flow previews.</p>
 </article>

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="560" viewBox="0 0 1180 560" role="img" aria-label="Data flow architecture draw.io preview">
+  <rect width="1180" height="560" fill="#f8fafc"/>
+  <text x="40" y="54" font-family="Segoe UI, Arial" font-size="26" font-weight="700" fill="#172033">draw.io Preview: Service A Data Flow Architecture</text>
+  <text x="40" y="84" font-family="Segoe UI, Arial" font-size="15" fill="#617083">Isolated data-flow layer. High-level data flow can be shown with Mermaid; architecture source stays in draw.io.</text>
+  <g font-family="Segoe UI, Arial" font-size="15" fill="#172033">
+    <rect x="72" y="240" width="190" height="92" rx="8" fill="#eaf1ff" stroke="#7aa2e8"/>
+    <text x="112" y="280" font-weight="700">Service A backend</text>
+    <rect x="344" y="150" width="220" height="96" rx="8" fill="#f1edfb" stroke="#b69be6"/>
+    <text x="388" y="190" font-weight="700">Aurora PostgreSQL</text>
+    <text x="398" y="216" fill="#617083">service data</text>
+    <rect x="344" y="340" width="220" height="96" rx="8" fill="#f1edfb" stroke="#b69be6"/>
+    <text x="396" y="380" font-weight="700">S3 export bucket</text>
+    <text x="386" y="406" fill="#617083">event source</text>
+    <rect x="650" y="340" width="200" height="96" rx="8" fill="#fff7df" stroke="#e8c866"/>
+    <text x="690" y="380" font-weight="700">Validation Lambda</text>
+    <text x="702" y="406" fill="#617083">schema check</text>
+    <rect x="930" y="242" width="190" height="110" rx="8" fill="#e8f7f2" stroke="#8ac7b6"/>
+    <text x="972" y="286" font-weight="700">Curated data lake</text>
+    <text x="970" y="314" fill="#617083">Data Analysis Account</text>
+  </g>
+  <g stroke="#64748b" stroke-width="2" fill="none" marker-end="url(#arrow)">
+    <path d="M262 270 C300 230 312 198 344 198"/>
+    <path d="M262 300 C306 340 316 388 344 388"/>
+    <path d="M564 388 L650 388"/>
+    <path d="M850 388 C890 370 900 318 930 298"/>
+  </g>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#64748b"/>
+    </marker>
+  </defs>
+</svg>
+

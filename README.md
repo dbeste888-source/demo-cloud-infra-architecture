@@ -1,67 +1,100 @@
 # Team AWS Architecture Documentation Harness
 
-This repository is a demo wire harness for an internal AWS architecture documentation and navigation system. It is intentionally GitHub-first: architecture knowledge is stored as versioned files, reviewed through pull requests, and published as readable Markdown pages through GitHub Pages.
+This repository is a demo wire harness for an internal AWS architecture documentation and navigation system. It is Git-centered: architecture files are versioned in the repository, reviewed through merge requests or pull requests, and published through GitLab Pages or GitHub Pages.
 
 ## Navigation Model
 
 ```text
-GitHub repository / GitHub Pages
+Pages portal
   -> Account Overview
-  -> Network + Resource Architecture
-  -> Communication / Data Flow
-  -> Metadata / Related Links
+  -> Account + Network Architecture
+  -> Service Architecture
+  -> Data-flow Architecture
+  -> Unit/API Flow
+  -> Metadata / Links
 ```
 
-## Repository Layout
+## Core Tool Roles
+
+| Layer | Tool | Purpose |
+| --- | --- | --- |
+| Account overview | Structurizr | Top-level account navigation and ownership relationship preview. |
+| Account + network | Structurizr | Account/network-level architecture preview. |
+| Service architecture | draw.io | Backend -> AWS resources -> feature realization. Also holds detailed multi-service communication and data movement. |
+| Data-flow architecture | draw.io | Isolated data-flow architecture layer. |
+| High-level data flow | Mermaid | Small readable data-flow preview. |
+| Unit/API flow | Mermaid | Single microservice/module API flow. |
+| Metadata | YAML and Markdown tables | Owner, account ID, repo, CDK, runbook, dashboard, Confluence, update timestamp. |
+
+## Repository Structure
 
 ```text
 .
 ├── README.md
-├── index.md                      # GitHub Pages repository-root landing page
-├── _config.yml                   # GitHub Pages/Jekyll configuration
-├── docs/                         # Published documentation pages
-│   ├── index.md                  # Portal home
-│   ├── account-overview.md       # Lightweight account navigation
-│   ├── ownership-overview.md     # Structurizr ownership map explanation
-│   ├── update-rule.md            # How architecture changes are proposed
-│   ├── review-checklist.md       # PR review checklist
-│   ├── accounts/                 # Account detail pages
-│   └── shared/                   # Shared metadata/linking guidance
-├── structurizr/                  # Lightweight top-level maps
-│   ├── workspace.dsl
-│   ├── accounts.dsl
-│   └── ownership.dsl
-├── diagrams/
-│   ├── network/                  # draw.io account-level infrastructure diagrams
-│   └── resources/                # draw.io VPC/service-focused diagrams
-├── flows/                        # Mermaid logical communication/data flows
-├── inventory/                    # YAML source metadata
-├── site/                         # Information architecture wireframe notes
-└── .github/workflows/            # Optional Pages deployment workflow
+├── index.md
+├── _config.yml
+├── .gitlab-ci.yml
+├── .github/workflows/pages.yml
+├── architecture/
+│   ├── 01-account/
+│   │   ├── account-overview.dsl
+│   │   ├── account-overview.svg
+│   │   ├── service-hosting-account-a-network.dsl
+│   │   └── service-hosting-account-a-network.svg
+│   ├── 02-service/
+│   │   ├── service-a-backend-architecture.drawio
+│   │   └── service-a-backend-architecture.svg
+│   ├── 03-data-flow/
+│   │   ├── service-a-data-flow-architecture.drawio
+│   │   ├── service-a-data-flow-architecture.svg
+│   │   └── service-a-high-level-data-flow.md
+│   └── 04-unit/
+│       └── service-a-api-flow.md
+├── docs/
+│   ├── index.md
+│   ├── account-overview.md
+│   ├── change-map.md
+│   ├── update-rule.md
+│   ├── review-checklist.md
+│   ├── accounts/
+│   ├── services/
+│   ├── data-flows/
+│   └── units/
+└── inventory/
+    ├── accounts.yaml
+    ├── services.yaml
+    ├── resources.yaml
+    ├── data-stores.yaml
+    └── cdk-stacks.yaml
 ```
 
-## Tool Roles
+## Change Map
 
-| Layer | Tool | Purpose |
-| --- | --- | --- |
-| Source of truth | GitHub repository | Stores every architecture artifact as reviewable files. |
-| Change control | Pull requests | Reviews architecture updates before publication. |
-| Account navigation | Structurizr | Lightweight account and ownership views only. |
-| Detailed infrastructure | draw.io | Network, VPC, subnet, and AWS resource diagrams. |
-| Logical flows | Mermaid | Simple communication, data, observability, and CI/CD flows. |
-| Portal | GitHub Pages | Publishes Markdown pages for browsing. |
+| Change | Edit |
+| --- | --- |
+| Account ownership or relationship | `architecture/01-account/`, `docs/account-overview.md`, `inventory/accounts.yaml` |
+| Account/network architecture | `architecture/01-account/*network*.dsl`, preview SVG, account page |
+| Service backend communication | `architecture/02-service/*.drawio`, preview SVG, service page |
+| Detailed multi-service communication/data movement | `architecture/02-service/*.drawio` |
+| Isolated data-flow architecture | `architecture/03-data-flow/*.drawio`, preview SVG, data-flow page |
+| High-level data flow | `architecture/03-data-flow/*.md` |
+| Single-service unit/API flow | `architecture/04-unit/*.md`, unit page |
+| Metadata only | `inventory/*.yaml` and affected page metadata table |
 
 ## Demo Path
 
-1. Start at [docs/index.md](docs/index.md).
-2. Open [docs/account-overview.md](docs/account-overview.md).
-3. Drill into [Service Hosting Account A](docs/accounts/service-hosting-account-a.md).
-4. Open the linked draw.io network diagram in [diagrams/network/service-hosting-account-a.drawio](diagrams/network/service-hosting-account-a.drawio).
-5. Continue to the Mermaid communication flow in [flows/service-a-communication.md](flows/service-a-communication.md).
-6. Inspect owner, repository, CDK, Datadog, runbook, docs, and update metadata on the account page.
+1. Start at `index.md`.
+2. Open `docs/account-overview.md`.
+3. Open `docs/accounts/service-hosting-account-a.md`.
+4. Open `docs/services/service-a-backend.md`.
+5. Open `docs/data-flows/service-a-data-architecture.md`.
+6. Open `docs/units/service-a-api-flow.md`.
+
+## GitLab Pages
+
+`.gitlab-ci.yml` builds the Jekyll site into `public/`, which is the GitLab Pages artifact folder. Source files stay in `architecture/`, `docs/`, and `inventory/`; `public/` is generated by CI.
 
 ## GitHub Pages
 
-For this harness, configure GitHub Pages to publish from the repository root on the `main` branch. Publishing from the root keeps `docs/`, `structurizr/`, `diagrams/`, `flows/`, and `inventory/` reachable as one coherent architecture workspace.
+`.github/workflows/pages.yml` builds the same Jekyll site and deploys it through GitHub Pages.
 
-An optional workflow is included at [.github/workflows/pages.yml](.github/workflows/pages.yml) for teams that prefer GitHub Actions-based Pages publication from the repository root.

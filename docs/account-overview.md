@@ -5,9 +5,18 @@ title: Account Overview
 
 # Account Overview
 
-This page is the lightweight top-level navigation map. It should remain readable for new team members, managers, engineers, developers, and operations teams. Low-level resources belong on account detail pages and draw.io diagrams.
+<div class="preview-frame">
+  <div class="preview-toolbar">
+    <strong>Structurizr preview</strong>
+    <span>
+      <a class="button" href="{{ '/architecture/01-account/account-overview.dsl' | relative_url }}">Download DSL</a>
+      <a class="button" href="{{ '/architecture/01-account/account-overview.svg' | relative_url }}">Open preview</a>
+    </span>
+  </div>
+  <img src="{{ '/architecture/01-account/account-overview.svg' | relative_url }}" alt="Structurizr account overview preview">
+</div>
 
-The corresponding Structurizr source is [`../structurizr/accounts.dsl`](../structurizr/accounts.dsl).
+## Accounts
 
 <div class="account-grid">
   <section class="account-card">
@@ -54,6 +63,6 @@ The corresponding Structurizr source is [`../structurizr/accounts.dsl`](../struc
 ## How to Use This Page
 
 1. Pick the account that owns the workload or service area.
-2. Open the account detail page for network and resource architecture.
-3. Follow service flow links for communication, data, observability, or deployment diagrams.
-4. Use metadata links for repositories, runbooks, dashboards, and update history.
+2. Open the account page for account/network Structurizr preview.
+3. Open service or data-flow draw.io previews.
+4. Use metadata links for repositories, runbooks, dashboards, and Confluence.
