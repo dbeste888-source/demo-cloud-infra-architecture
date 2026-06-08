@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+    <meta name="description" content="{{ site.description }}">
+    <link rel="stylesheet" href="{{ '/assets/css/portal.css' | relative_url }}">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="{{ '/' | relative_url }}">
+        <span class="brand-mark">AWS</span>
+        <span>
+          <strong>Team Architecture Portal</strong>
+          <small>GitHub-based documentation harness</small>
+        </span>
+      </a>
+      <nav class="top-nav" aria-label="Primary navigation">
+        <a href="{{ '/docs/account-overview.html' | relative_url }}">Accounts</a>
+        <a href="{{ '/docs/ownership-overview.html' | relative_url }}">Ownership</a>
+        <a href="{{ '/docs/update-rule.html' | relative_url }}">Update Rule</a>
+        <a href="{{ '/docs/review-checklist.html' | relative_url }}">Review</a>
+      </nav>
+    </header>
+
+    <main class="page-shell">
+      {{ content }}
+    </main>
+
+    <footer class="site-footer">
+      <span>Source of truth: GitHub repository</span>
+      <span>Diagram layers: Structurizr, draw.io, Mermaid, Markdown</span>
+    </footer>
+
+    <script type="module">
+      import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs";
+      document.querySelectorAll("pre > code.language-mermaid").forEach((block) => {
+        const diagram = document.createElement("div");
+        diagram.className = "mermaid";
+        diagram.textContent = block.textContent;
+        block.parentElement.replaceWith(diagram);
+      });
+      mermaid.initialize({ startOnLoad: true, theme: "base", securityLevel: "loose" });
+    </script>
+  </body>
+</html>
